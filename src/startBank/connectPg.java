@@ -28,9 +28,7 @@ public class connectPg {
 	public Connection conectPostgree() {
 		try {
 			Class.forName("org.postgresql.Driver");
-			System.out.println("Apos Class.forname().");
-
-			String url = "jdbc:postgresql://localhost:5432/sgvpi";
+			String url = "jdbc:postgresql://localhost:5432/sgvpiBank";
 			Connection con = DriverManager.getConnection(url, "postgres", "ws8493");
 			System.out.println("Apos obter conexao.");
 			return con;
