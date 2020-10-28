@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="drivers-java/postgresql-42.2.12.jar"/>
 	<classpathentry kind="lib" path="drivers-java/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="drivers-java/xstream-1.4.9.jar"/>
+	<classpathentry kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
