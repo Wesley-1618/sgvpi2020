@@ -21,8 +21,8 @@ import java.awt.Insets;
 public class TelaLogin extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField campoLogin;
+	private JPasswordField campoSenha;
 
 	/**
 	 * Launch the application.
@@ -65,16 +65,16 @@ public class TelaLogin extends JFrame {
 		gbc_lblNewLabel.gridy = 0;
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
 		
-		textField = new JTextField();
-		GridBagConstraints gbc_textField = new GridBagConstraints();
-		gbc_textField.anchor = GridBagConstraints.NORTH;
-		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField.insets = new Insets(0, 0, 5, 0);
-		gbc_textField.gridwidth = 3;
-		gbc_textField.gridx = 1;
-		gbc_textField.gridy = 1;
-		contentPane.add(textField, gbc_textField);
-		textField.setColumns(10);
+		campoLogin = new JTextField();
+		GridBagConstraints gbc_campoLogin = new GridBagConstraints();
+		gbc_campoLogin.anchor = GridBagConstraints.NORTH;
+		gbc_campoLogin.fill = GridBagConstraints.HORIZONTAL;
+		gbc_campoLogin.insets = new Insets(0, 0, 5, 0);
+		gbc_campoLogin.gridwidth = 3;
+		gbc_campoLogin.gridx = 1;
+		gbc_campoLogin.gridy = 1;
+		contentPane.add(campoLogin, gbc_campoLogin);
+		campoLogin.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Senha");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -91,24 +91,24 @@ public class TelaLogin extends JFrame {
 			}
 		});
 		
-		passwordField = new JPasswordField();
-		GridBagConstraints gbc_passwordField = new GridBagConstraints();
-		gbc_passwordField.anchor = GridBagConstraints.NORTH;
-		gbc_passwordField.fill = GridBagConstraints.HORIZONTAL;
-		gbc_passwordField.insets = new Insets(0, 0, 5, 0);
-		gbc_passwordField.gridwidth = 3;
-		gbc_passwordField.gridx = 1;
-		gbc_passwordField.gridy = 3;
-		contentPane.add(passwordField, gbc_passwordField);
+		campoSenha = new JPasswordField();
+		GridBagConstraints gbc_campoSenha = new GridBagConstraints();
+		gbc_campoSenha.anchor = GridBagConstraints.NORTH;
+		gbc_campoSenha.fill = GridBagConstraints.HORIZONTAL;
+		gbc_campoSenha.insets = new Insets(0, 0, 5, 0);
+		gbc_campoSenha.gridwidth = 3;
+		gbc_campoSenha.gridx = 1;
+		gbc_campoSenha.gridy = 3;
+		contentPane.add(campoSenha, gbc_campoSenha);
 		
-		JButton btnNewButton = new JButton("Login");
-		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-		gbc_btnNewButton.anchor = GridBagConstraints.NORTH;
-		gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnNewButton.insets = new Insets(0, 0, 0, 5);
-		gbc_btnNewButton.gridx = 1;
-		gbc_btnNewButton.gridy = 5;
-		contentPane.add(btnNewButton, gbc_btnNewButton);
+		JButton btnLogin = new JButton("Login");
+		GridBagConstraints gbc_btnLogin = new GridBagConstraints();
+		gbc_btnLogin.anchor = GridBagConstraints.SOUTH;
+		gbc_btnLogin.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnLogin.insets = new Insets(0, 0, 0, 5);
+		gbc_btnLogin.gridx = 1;
+		gbc_btnLogin.gridy = 5;
+		contentPane.add(btnLogin, gbc_btnLogin);
 		GridBagConstraints gbc_btnSair = new GridBagConstraints();
 		gbc_btnSair.anchor = GridBagConstraints.NORTH;
 		gbc_btnSair.fill = GridBagConstraints.HORIZONTAL;
