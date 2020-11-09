@@ -133,7 +133,7 @@ public class CreateBDO {
 		sql.append("cod_fornecedor integer not null, ");
 		sql.append("data_fornecimento date not null,");
 		sql.append("constraint fornecimento_pkey primary key (cod_fornecimento),");
-		sql.append("foreign key (cod_loja) references Loja (cod_loja)");
+		sql.append("foreign key (cod_loja) references Loja (cod_loja),");
 		sql.append("foreign key (cod_fornecedor) references Fornecedor (cod_fornecedor)");
 		sql.append(")");
 
@@ -146,7 +146,7 @@ public class CreateBDO {
 
 	private void criarEstoque(Connection link) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("CREATE TEBLE IF NOT EXISTS Estoque");
+		sql.append("CREATE TABLE IF NOT EXISTS Estoque");
 		sql.append("(");
 		sql.append("cod_estoque integer not null,");
 		sql.append("cod_loja integer not null,");
@@ -166,12 +166,12 @@ public class CreateBDO {
 
 	private void criarCliente(Connection link) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("CREATE TABLE IF NOT EXISTS Cliete");
+		sql.append("CREATE TABLE IF NOT EXISTS Cliente");
 		sql.append("(");
 		sql.append("cod_cliente integer not null,");
 		sql.append("cpf_cliente numeric(14) not null,");
-		sql.append("email_cliente varchar(50)");
-		sql.append("telefone_cliente numeric(12)");
+		sql.append("email_cliente varchar(50),");
+		sql.append("telefone_cliente numeric(12),");
 		sql.append("constraint cliente_pkey primary key (cod_cliente)");
 		sql.append(")");
 
@@ -210,7 +210,7 @@ public class CreateBDO {
 		sql.append("(");
 		sql.append("cod_forma_pagamento integer not null,");
 		sql.append("forma_pagamento varchar(50) not null,");
-		sql.append("constraint forma_pagamento_pkey primary key (cod_forma_pagamento),");
+		sql.append("constraint forma_pagamento_pkey primary key (cod_forma_pagamento)");
 		sql.append(")");
 
 		try (Statement comando = link.createStatement();) {
@@ -237,7 +237,7 @@ public class CreateBDO {
 		sql.append("foreign key (cod_forma_pagamento) references Forma_Pagamento (cod_forma_pagamento),");
 		sql.append("foreign key (cod_cliente) references cliente (cod_cliente),");
 		sql.append("foreign key (cod_loja) references loja (cod_loja),");
-		sql.append("foreign key (cod_produto) references produto (cod_produto),");
+		sql.append("foreign key (cod_produto) references produto (cod_produto)");
 		sql.append(")");
 
 		try (Statement comando = link.createStatement();) {
