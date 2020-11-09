@@ -4,12 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class connectPg {
+public class ConnectPg {
 	public static void main(String[] args) {
-		new connectPg().testconection();
+		// new ConnectPg().testConection();
+		CreateBDO crtBdo = new CreateBDO();
+		crtBdo.processar();
 	}
 
-	void testconection() {
+	void testConection() {
 		Connection c = conectPostgree();
 
 		if (c != null) {
@@ -28,20 +30,20 @@ public class connectPg {
 	public Connection conectPostgree() {
 		try {
 			Class.forName("org.postgresql.Driver");
-			String url = "jdbc:postgresql://localhost:5432/sgvpiBank";
+			String url = "jdbc:postgresql://localhost:5432/SgvPI";
 			Connection con = DriverManager.getConnection(url, "postgres", "ws8493");
 			System.out.println("Apos obter conexao.");
 			return con;
 		} catch (ClassNotFoundException e) {
-			connectPg.printSQLException(null, e);
+			ConnectPg.printSQLException(null, e);
 		} catch (SQLException e) {
-			connectPg.printSQLException(e, null);
+			ConnectPg.printSQLException(e, null);
 		}
 		return null;
 
 	}
 
-	private static void printSQLException(SQLException tst, Exception exception) {
+	public static void printSQLException(SQLException tst, Exception exception) {
 		for (Throwable e : tst) {
 			if (e instanceof SQLException) {
 				e.printStackTrace(System.err);
