@@ -14,6 +14,7 @@ public class CreateBDO {
 		Connection tabConect = cnct.conectPostgree();
 		System.out.println("\n");
 		cnct.testConection();
+		cascadeDropAll(tabConect);
 		criarLoja(tabConect);
 		criarFuncionario(tabConect);
 		criarTipoProduto(tabConect);
@@ -25,6 +26,13 @@ public class CreateBDO {
 		criarEnderecoCliente(tabConect);
 		criarFormaPagamento(tabConect);
 		criarVenda(tabConect);
+	}
+
+	private void cascadeDropAll(Connection link) {
+		StringBuilder sql = new StringBuilder();
+		sql.append(
+				"drop table if exists cliente, endereco_cliente,estoque,forma_pagamento,fornecedor, fornecimento,funcionario,loja,produto,tipo_produto,venda CASCADE");
+
 	}
 
 	private void criarLoja(Connection link) {
