@@ -50,6 +50,8 @@ public class CreateBDO {
 		sql.append(" cod_funcionario integer not null, ");
 		sql.append(" nome_funcionario varchar(40) not null,");
 		sql.append(" cpf_funcionario numeric(14) not null, ");
+		sql.append("funuser_login varchar(30) not null,");
+		sql.append("funuser_senha varchar(20) not null,");
 		sql.append(" constraint funcionario_pkey primary key (cod_funcionario)");
 		sql.append(")");
 
