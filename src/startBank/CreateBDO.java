@@ -68,7 +68,7 @@ public class CreateBDO {
 		sql.append(" CREATE TABLE IF NOT EXISTS Tipo_Produto ");
 		sql.append("(");
 		sql.append("cod_tipo_produto integer not null,");
-		sql.append("nome_tipo varchar(40), ");
+		sql.append("nome_tipo_produto varchar(40), ");
 		sql.append("constraint TipoProduto_pkey Primary key (cod_tipo_produto)");
 		sql.append(")");
 
