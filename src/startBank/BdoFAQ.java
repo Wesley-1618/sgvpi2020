@@ -19,55 +19,6 @@ public class BdoFAQ {
 		return cod_loja;
 	}
 
-	public BdoFAQ(int cod_loja, int cod_funcionario, int cod_fornecimento, int cod_fornecedor, int telefone_fornecedor,
-			int cod_produto, int cod_tipo_produto, int cod_venda, int quantidade_produto_venda, int cod_forma_pagamento,
-			int cod_estoque, int cod_endereco_cliente, int numero_casa, int cod_cliente, int telefone_cliente,
-			double loja_cnpj, double cpf_funcionario, double cnpj_fornecedor, double preco_produto,
-			double quantidade_produto, double valor_compra, double quantidade_produto_estoque, double cep_cliente,
-			double cpf_cliente, String nome_funcionario, String funuser_login, String funuser_senha,
-			String nome_fornecedor, String contato_fornecedor, String nome_produto, String descricao_produto,
-			String nome_tipo_produto, String forma_pagamento, String nome_rua, String complemento_cliente,
-			String email_cliente, Date data_fornecimento) {
-		super();
-		this.cod_loja = cod_loja;
-		this.cod_funcionario = cod_funcionario;
-		this.cod_fornecimento = cod_fornecimento;
-		this.cod_fornecedor = cod_fornecedor;
-		this.telefone_fornecedor = telefone_fornecedor;
-		this.cod_produto = cod_produto;
-		this.cod_tipo_produto = cod_tipo_produto;
-		this.cod_venda = cod_venda;
-		this.quantidade_produto_venda = quantidade_produto_venda;
-		this.cod_forma_pagamento = cod_forma_pagamento;
-		this.cod_estoque = cod_estoque;
-		this.cod_endereco_cliente = cod_endereco_cliente;
-		this.numero_casa = numero_casa;
-		this.cod_cliente = cod_cliente;
-		this.telefone_cliente = telefone_cliente;
-		this.loja_cnpj = loja_cnpj;
-		this.cpf_funcionario = cpf_funcionario;
-		this.cnpj_fornecedor = cnpj_fornecedor;
-		this.preco_produto = preco_produto;
-		this.quantidade_produto = quantidade_produto;
-		this.valor_compra = valor_compra;
-		this.quantidade_produto_estoque = quantidade_produto_estoque;
-		this.cep_cliente = cep_cliente;
-		this.cpf_cliente = cpf_cliente;
-		this.nome_funcionario = nome_funcionario;
-		this.funuser_login = funuser_login;
-		this.funuser_senha = funuser_senha;
-		this.nome_fornecedor = nome_fornecedor;
-		this.contato_fornecedor = contato_fornecedor;
-		this.nome_produto = nome_produto;
-		this.descricao_produto = descricao_produto;
-		this.nome_tipo_produto = nome_tipo_produto;
-		this.forma_pagamento = forma_pagamento;
-		this.nome_rua = nome_rua;
-		this.complemento_cliente = complemento_cliente;
-		this.email_cliente = email_cliente;
-		this.data_fornecimento = data_fornecimento;
-	}
-
 	public void setCod_loja(int cod_loja) {
 		this.cod_loja = cod_loja;
 	}
@@ -360,9 +311,9 @@ public class BdoFAQ {
 		this.data_fornecimento = data_fornecimento;
 	}
 
+	// Tabela Venda
 	public BdoFAQ(int codVenda, int codFormaPagamento, int codCliente, int codLoja, int codProduto, double valorCompra,
 			int qtdeProdutoVenda) {
-		// Tabela Venda
 		this.cod_venda = codVenda;
 		this.cod_forma_pagamento = codFormaPagamento;
 		this.cod_cliente = codCliente;
@@ -371,8 +322,29 @@ public class BdoFAQ {
 		this.valor_compra = valorCompra;
 		this.quantidade_produto_venda = qtdeProdutoVenda;
 	}
-	
-	
+
+	// Tabela Tipo Produto
+	public BdoFAQ(int codProduto, String nomeTipoProduto) {
+		this.cod_produto = codProduto;
+		this.nome_tipo_produto = nomeTipoProduto;
+	}
+
+	// Tabela Produto
+	public BdoFAQ(int codProduto, int codTipoProduto, double precoProduto, String nomeProduto, String descricaoProduto,
+			double quantidadeProduto) {
+		this.cod_produto = codProduto;
+		this.cod_tipo_produto = codTipoProduto;
+		this.preco_produto = precoProduto;
+		this.nome_produto = nomeProduto;
+		this.descricao_produto = descricaoProduto;
+		this.quantidade_produto = quantidadeProduto;
+	}
+
+	// Tabela Loja
+	public BdoFAQ(int codLoja, double lojaCnpj) {
+		this.cod_loja = codLoja;
+		this.loja_cnpj = lojaCnpj;
+	}
 
 	public BdoFAQ() {
 
