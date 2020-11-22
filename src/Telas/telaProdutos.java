@@ -1,6 +1,5 @@
 package Telas;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -12,9 +11,15 @@ import javax.swing.JTextField;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class telaProdutos extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tbProdutos;
 	private JTextField txPesquisa;
@@ -46,12 +51,12 @@ public class telaProdutos extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.columnWidths = new int[]{152, 121, 121, 249, 89, 0};
-		gbl_contentPane.rowHeights = new int[]{38, 23, 30, 368, 44, 23, 0};
-		gbl_contentPane.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_contentPane.columnWidths = new int[] { 152, 121, 121, 249, 89, 0 };
+		gbl_contentPane.rowHeights = new int[] { 38, 23, 30, 368, 44, 23, 0 };
+		gbl_contentPane.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gbl_contentPane.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		contentPane.setLayout(gbl_contentPane);
-		
+
 		JButton btnCadastrarProduto = new JButton("Cadastrar Produto");
 		GridBagConstraints gbc_btnCadastrarProduto = new GridBagConstraints();
 		gbc_btnCadastrarProduto.anchor = GridBagConstraints.NORTHEAST;
@@ -59,7 +64,7 @@ public class telaProdutos extends JFrame {
 		gbc_btnCadastrarProduto.gridx = 0;
 		gbc_btnCadastrarProduto.gridy = 1;
 		contentPane.add(btnCadastrarProduto, gbc_btnCadastrarProduto);
-		
+
 		JButton btnModificarProduto = new JButton("Modificar Produto");
 		GridBagConstraints gbc_btnModificarProduto = new GridBagConstraints();
 		gbc_btnModificarProduto.anchor = GridBagConstraints.NORTH;
@@ -68,7 +73,7 @@ public class telaProdutos extends JFrame {
 		gbc_btnModificarProduto.gridx = 1;
 		gbc_btnModificarProduto.gridy = 1;
 		contentPane.add(btnModificarProduto, gbc_btnModificarProduto);
-		
+
 		JButton btnExcluirProduto = new JButton("Excluir Produto");
 		GridBagConstraints gbc_btnExcluirProduto = new GridBagConstraints();
 		gbc_btnExcluirProduto.anchor = GridBagConstraints.NORTH;
@@ -77,7 +82,7 @@ public class telaProdutos extends JFrame {
 		gbc_btnExcluirProduto.gridx = 2;
 		gbc_btnExcluirProduto.gridy = 1;
 		contentPane.add(btnExcluirProduto, gbc_btnExcluirProduto);
-		
+
 		txPesquisa = new JTextField();
 		txPesquisa.setToolTipText("Pesquisar");
 		GridBagConstraints gbc_txPesquisa = new GridBagConstraints();
@@ -87,7 +92,7 @@ public class telaProdutos extends JFrame {
 		gbc_txPesquisa.gridy = 1;
 		contentPane.add(txPesquisa, gbc_txPesquisa);
 		txPesquisa.setColumns(10);
-		
+
 		JButton btnPesquisar = new JButton("Pesquisar");
 		GridBagConstraints gbc_btnPesquisar = new GridBagConstraints();
 		gbc_btnPesquisar.anchor = GridBagConstraints.NORTHEAST;
@@ -95,7 +100,7 @@ public class telaProdutos extends JFrame {
 		gbc_btnPesquisar.gridx = 4;
 		gbc_btnPesquisar.gridy = 1;
 		contentPane.add(btnPesquisar, gbc_btnPesquisar);
-		
+
 		tbProdutos = new JTable();
 		GridBagConstraints gbc_tbProdutos = new GridBagConstraints();
 		gbc_tbProdutos.fill = GridBagConstraints.BOTH;
@@ -104,13 +109,19 @@ public class telaProdutos extends JFrame {
 		gbc_tbProdutos.gridx = 0;
 		gbc_tbProdutos.gridy = 3;
 		contentPane.add(tbProdutos, gbc_tbProdutos);
-		
-		JButton btnSair = new JButton("Sair");
-		GridBagConstraints gbc_btnSair = new GridBagConstraints();
-		gbc_btnSair.anchor = GridBagConstraints.NORTH;
-		gbc_btnSair.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnSair.gridx = 4;
-		gbc_btnSair.gridy = 5;
-		contentPane.add(btnSair, gbc_btnSair);
+
+		JButton btnInicio = new JButton("Inicio");
+		GridBagConstraints gbc_btnInicio = new GridBagConstraints();
+		gbc_btnInicio.anchor = GridBagConstraints.NORTH;
+		gbc_btnInicio.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnInicio.gridx = 4;
+		gbc_btnInicio.gridy = 5;
+		btnInicio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new telaPrincipal().setVisible(true);
+			}
+		});
+
+		contentPane.add(btnInicio, gbc_btnInicio);
 	}
 }

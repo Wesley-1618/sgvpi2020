@@ -1,7 +1,8 @@
 package Telas;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,6 +12,10 @@ import javax.swing.JButton;
 
 public class telaFuncionarios extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tbFuncionario;
 	private JButton btnSair;
@@ -45,27 +50,33 @@ public class telaFuncionarios extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		tbFuncionario = new JTable();
 		tbFuncionario.setBounds(10, 132, 764, 384);
 		contentPane.add(tbFuncionario);
-		
+
 		JButton button = new JButton("New button");
 		button.setBounds(256, 414, 89, 23);
 		contentPane.add(button);
-		
-		btnSair = new JButton("Sair");
+
+		// Botao Inicio
+		btnSair = new JButton("Inicio");
 		btnSair.setBounds(657, 527, 89, 23);
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new telaPrincipal().setVisible(true);
+			}
+		});
 		contentPane.add(btnSair);
-		
+
 		btnCadastrarFuncionario = new JButton("Cadastrar Funcion\u00E1rio");
 		btnCadastrarFuncionario.setBounds(10, 48, 139, 23);
 		contentPane.add(btnCadastrarFuncionario);
-		
+
 		btnModificarFuncionrio = new JButton("Modificar Funcion\u00E1rio");
 		btnModificarFuncionrio.setBounds(159, 48, 139, 23);
 		contentPane.add(btnModificarFuncionrio);
-		
+
 		btnExcluirFuncionrio = new JButton("Excluir Funcion\u00E1rio");
 		btnExcluirFuncionrio.setBounds(308, 48, 139, 23);
 		contentPane.add(btnExcluirFuncionrio);

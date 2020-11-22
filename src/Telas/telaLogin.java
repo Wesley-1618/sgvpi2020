@@ -1,6 +1,5 @@
 package Telas;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,13 +12,16 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.SwingConstants;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
 public class telaLogin extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField campoLogin;
 	private JPasswordField campoSenha;
@@ -51,12 +53,12 @@ public class telaLogin extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.columnWidths = new int[]{135, 84, 41, 89, 0, 0, 0, 0};
-		gbl_contentPane.rowHeights = new int[]{17, 20, 17, 20, 36, 23, 0, 0};
-		gbl_contentPane.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_contentPane.columnWidths = new int[] { 135, 84, 41, 89, 0, 0, 0, 0 };
+		gbl_contentPane.rowHeights = new int[] { 17, 20, 17, 20, 36, 23, 0, 0 };
+		gbl_contentPane.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gbl_contentPane.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		contentPane.setLayout(gbl_contentPane);
-		
+
 		JLabel lblNewLabel = new JLabel("Login");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
@@ -65,7 +67,7 @@ public class telaLogin extends JFrame {
 		gbc_lblNewLabel.gridx = 2;
 		gbc_lblNewLabel.gridy = 0;
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
-		
+
 		campoLogin = new JTextField();
 		GridBagConstraints gbc_campoLogin = new GridBagConstraints();
 		gbc_campoLogin.anchor = GridBagConstraints.NORTH;
@@ -76,7 +78,7 @@ public class telaLogin extends JFrame {
 		gbc_campoLogin.gridy = 1;
 		contentPane.add(campoLogin, gbc_campoLogin);
 		campoLogin.setColumns(10);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Senha");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
@@ -85,7 +87,7 @@ public class telaLogin extends JFrame {
 		gbc_lblNewLabel_1.gridx = 2;
 		gbc_lblNewLabel_1.gridy = 2;
 		contentPane.add(lblNewLabel_1, gbc_lblNewLabel_1);
-		
+
 		campoSenha = new JPasswordField();
 		GridBagConstraints gbc_campoSenha = new GridBagConstraints();
 		gbc_campoSenha.anchor = GridBagConstraints.NORTH;
@@ -95,7 +97,7 @@ public class telaLogin extends JFrame {
 		gbc_campoSenha.gridx = 1;
 		gbc_campoSenha.gridy = 3;
 		contentPane.add(campoSenha, gbc_campoSenha);
-		
+
 		JButton btnLogin = new JButton("Login");
 		GridBagConstraints gbc_btnLogin = new GridBagConstraints();
 		gbc_btnLogin.anchor = GridBagConstraints.SOUTH;
@@ -104,10 +106,11 @@ public class telaLogin extends JFrame {
 		gbc_btnLogin.gridx = 1;
 		gbc_btnLogin.gridy = 5;
 		contentPane.add(btnLogin, gbc_btnLogin);
-		
+
 		JButton btnSair = new JButton("Sair");
 		btnSair.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
 		GridBagConstraints gbc_btnSair = new GridBagConstraints();
