@@ -346,6 +346,67 @@ public class BdoFAQ {
 		this.loja_cnpj = lojaCnpj;
 	}
 
+	// Tabela Funcionario
+	public BdoFAQ(int codFuncionario, String nomeFuncionario, double cpfFuncionario, String funuserLogin,
+			String funuserSenha) {
+		this.cod_funcionario = codFuncionario;
+		this.nome_funcionario = nomeFuncionario;
+		this.cpf_funcionario = cpfFuncionario;
+		this.funuser_login = funuserLogin;
+		this.funuser_senha = funuserSenha;
+	}
+
+	// Tabela Fornecimento
+	public BdoFAQ(int codFornecimento, int codLoja, int codFornecedor, Date dataFornecimento) {
+		this.cod_fornecimento = codFornecimento;
+		this.cod_loja = codLoja;
+		this.cod_fornecedor = codFornecedor;
+		this.data_fornecimento = dataFornecimento;
+	}
+
+	// Tabela Fornecedor
+	public BdoFAQ(int codFornecedor, int codProduto, String nomeFornecedor, double cnpjFornecedor,
+			String contatoFornecedor, int telefoneFornecedor) {
+		this.cod_fornecedor = codFornecedor;
+		this.cod_produto = codProduto;
+		this.nome_fornecedor = nomeFornecedor;
+		this.cnpj_fornecedor = cnpjFornecedor;
+		this.contato_fornecedor = contatoFornecedor;
+		this.telefone_fornecedor = telefoneFornecedor;
+	}
+
+	// Forma Pagamento
+	public BdoFAQ(String formaPagamento, int codFormaPagamento) {
+		this.cod_forma_pagamento = codFormaPagamento;
+		this.forma_pagamento = formaPagamento;
+	}
+
+	// Estoque
+	public BdoFAQ(int codEstoque, int codLoja, int codProduto, int quantidadeProdutoEstoque) {
+		this.cod_estoque = codEstoque;
+		this.cod_loja = codLoja;
+		this.quantidade_produto_estoque = quantidadeProdutoEstoque;
+	}
+
+	// Endereco Cliente
+	public BdoFAQ(int codEnderecoCliente, int codCliente, String nomeRua, int numeroCasa, double cepCliente,
+			String complementoCliente) {
+		this.cod_endereco_cliente = codEnderecoCliente;
+		this.cod_cliente = codCliente;
+		this.nome_rua = nomeRua;
+		this.numero_casa = numeroCasa;
+		this.cep_cliente = cepCliente;
+		this.complemento_cliente = complementoCliente;
+	}
+
+	// Cliente
+	public BdoFAQ(int codCliente, double cpfCliente, String emailCliente, int telefoneCliente) {
+		this.cod_cliente = codCliente;
+		this.cpf_cliente = cpfCliente;
+		this.email_cliente = emailCliente;
+		this.telefone_cliente = telefoneCliente;
+	}
+
 	public BdoFAQ() {
 
 	}
