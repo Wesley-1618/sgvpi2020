@@ -27,7 +27,7 @@ public class telaFuncionarios extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					telaFuncionarios frame = new telaFuncionarios();
+					telaFuncionarios frame = new telsaFuncionarios();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
