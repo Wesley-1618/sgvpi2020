@@ -16,17 +16,11 @@ import java.awt.event.ActionListener;
 
 public class telaProdutos extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tbProdutos;
 	private JTextField txPesquisa;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -40,9 +34,6 @@ public class telaProdutos extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public telaProdutos() {
 		setTitle("Produtos");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

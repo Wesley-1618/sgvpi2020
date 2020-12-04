@@ -20,17 +20,11 @@ import java.awt.Insets;
 
 public class telaLogin extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField campoLogin;
 	private JPasswordField campoSenha;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -44,9 +38,6 @@ public class telaLogin extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public telaLogin() {
 		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -113,12 +104,14 @@ public class telaLogin extends JFrame {
 				String nomeUsuario = campoLogin.getText();
 				@SuppressWarnings("deprecation")
 				String senha = campoSenha.getText();
+				nomeUsuario = nomeUsuario.toLowerCase();
+				senha = senha.toLowerCase();
 				if (nomeUsuario.trim().equals("admin") && senha.trim().equals("admin")) {
 					new telaPrincipal().setVisible(true);
 					telaLogin.this.dispose();
 				} else {
 					JOptionPane.showMessageDialog(null, "Usuário ou senha errados!!!");
-					}
+				}
 			}
 		});
 		JButton btnSair = new JButton("Sair");

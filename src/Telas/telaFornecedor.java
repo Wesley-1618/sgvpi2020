@@ -12,16 +12,10 @@ import javax.swing.JButton;
 
 public class telaFornecedor extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tbFornecedores;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -35,9 +29,6 @@ public class telaFornecedor extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public telaFornecedor() {
 		setTitle("Fornecedores");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -68,6 +59,7 @@ public class telaFornecedor extends JFrame {
 		btnInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaPrincipal().setVisible(true);
+				telaFornecedor.this.dispose();
 			}
 		});
 		contentPane.add(btnInicio);

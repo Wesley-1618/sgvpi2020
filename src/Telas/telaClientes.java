@@ -15,9 +15,6 @@ import java.awt.Insets;
 
 public class telaClientes extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
@@ -111,6 +108,7 @@ public class telaClientes extends JFrame {
 		btnInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaPrincipal().setVisible(true);
+				telaClientes.this.dispose();
 			}
 		});
 		contentPane.add(btnInicio, gbc_btnInicio);

@@ -12,9 +12,6 @@ import javax.swing.JButton;
 
 public class telaFuncionarios extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tbFuncionario;
@@ -23,9 +20,6 @@ public class telaFuncionarios extends JFrame {
 	private JButton btnModificarFuncionrio;
 	private JButton btnExcluirFuncionrio;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -39,9 +33,6 @@ public class telaFuncionarios extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public telaFuncionarios() {
 		setTitle("Funcion\u00E1rios");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -59,12 +50,12 @@ public class telaFuncionarios extends JFrame {
 		button.setBounds(256, 414, 89, 23);
 		contentPane.add(button);
 
-		// Botao Inicio
 		btnSair = new JButton("Inicio");
 		btnSair.setBounds(657, 527, 89, 23);
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaPrincipal().setVisible(true);
+				telaFuncionarios.this.dispose();
 			}
 		});
 		contentPane.add(btnSair);
