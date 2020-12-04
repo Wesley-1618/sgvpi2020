@@ -9,6 +9,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.JButton;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
+import javax.swing.table.DefaultTableModel;
 
 public class telaFuncionarios extends JFrame {
 
@@ -43,6 +46,17 @@ public class telaFuncionarios extends JFrame {
 		contentPane.setLayout(null);
 
 		tbFuncionario = new JTable();
+		tbFuncionario.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null},
+			},
+			new String[] {
+				"C\u00F3digo Func.", "Nome", "CPF"
+			}
+		));
+		tbFuncionario.getColumnModel().getColumn(1).setPreferredWidth(300);
+		tbFuncionario.getColumnModel().getColumn(2).setPreferredWidth(150);
+		tbFuncionario.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		tbFuncionario.setBounds(10, 132, 764, 384);
 		contentPane.add(tbFuncionario);
 
@@ -72,5 +86,4 @@ public class telaFuncionarios extends JFrame {
 		btnExcluirFuncionrio.setBounds(308, 48, 139, 23);
 		contentPane.add(btnExcluirFuncionrio);
 	}
-
 }
