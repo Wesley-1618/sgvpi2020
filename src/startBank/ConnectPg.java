@@ -29,8 +29,8 @@ public class ConnectPg {
 	public Connection conectPostgree() {
 		try {
 			Class.forName("org.postgresql.Driver");
-			String url = "jdbc:postgresql://localhost:5432/SgvPI";
-			Connection con = DriverManager.getConnection(url, "postgres", "ws8493");
+			String url = "jdbc:postgresql://localhost:5432/sgvpi";
+			Connection con = DriverManager.getConnection(url, "postgres", "12345");
 			System.out.println("Apos obter conexao.");
 			return con;
 		} catch (ClassNotFoundException e) {

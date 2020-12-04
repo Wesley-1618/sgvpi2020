@@ -119,6 +119,7 @@ public class telaProdutos extends JFrame {
 		btnInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaPrincipal().setVisible(true);
+				telaProdutos.this.dispose();
 			}
 		});
 

@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -106,7 +108,19 @@ public class telaLogin extends JFrame {
 		gbc_btnLogin.gridx = 1;
 		gbc_btnLogin.gridy = 5;
 		contentPane.add(btnLogin, gbc_btnLogin);
-
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String nomeUsuario = campoLogin.getText();
+				@SuppressWarnings("deprecation")
+				String senha = campoSenha.getText();
+				if (nomeUsuario.trim().equals("admin") && senha.trim().equals("admin")) {
+					new telaPrincipal().setVisible(true);
+					telaLogin.this.dispose();
+				} else {
+					JOptionPane.showMessageDialog(null, "Usuário ou senha errados!!!");
+					}
+			}
+		});
 		JButton btnSair = new JButton("Sair");
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

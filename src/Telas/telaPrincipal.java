@@ -33,9 +33,6 @@ public class telaPrincipal extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public telaPrincipal() {
 		setTitle("Menu Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,6 +61,7 @@ public class telaPrincipal extends JFrame {
 		btnProdutos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaProdutos().setVisible(true);
+				telaPrincipal.this.dispose();
 			}
 		});
 
@@ -88,10 +86,11 @@ public class telaPrincipal extends JFrame {
 		gbc_btnProdutos.insets = new Insets(0, 0, 5, 5);
 		gbc_btnProdutos.gridx = 1;
 		gbc_btnProdutos.gridy = 4;
+
 		btnCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaClientes().setVisible(true);
-				
+				telaPrincipal.this.dispose();
 			}
 		});
 		contentPane.add(btnProdutos, gbc_btnProdutos);
@@ -105,6 +104,7 @@ public class telaPrincipal extends JFrame {
 		btnFornecedor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaFornecedor().setVisible(true);
+				telaPrincipal.this.dispose();
 			}
 		});
 		contentPane.add(btnFornecedor, gbc_btnFornecedores);
@@ -118,18 +118,10 @@ public class telaPrincipal extends JFrame {
 		btnFuncionarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaFuncionarios().setVisible(true);
+				telaPrincipal.this.dispose();
 			}
 		});
 		contentPane.add(btnFuncionarios, gbc_btnFuncionarios);
-
-		JButton btnGerEstq = new JButton("Gerenciamento de Estoque");
-		GridBagConstraints gbc_btnGerEstq = new GridBagConstraints();
-		gbc_btnGerEstq.anchor = GridBagConstraints.NORTH;
-		gbc_btnGerEstq.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnGerEstq.insets = new Insets(0, 0, 5, 5);
-		gbc_btnGerEstq.gridx = 1;
-		gbc_btnGerEstq.gridy = 10;
-		contentPane.add(btnGerEstq, gbc_btnGerEstq);
 
 		JButton btnSair = new JButton("Sair");
 		GridBagConstraints gbc_btnSair = new GridBagConstraints();
