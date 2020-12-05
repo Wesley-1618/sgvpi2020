@@ -42,16 +42,24 @@ public class telaFornecedor extends JFrame {
 		tbFornecedores.setBounds(10, 177, 764, 307);
 		contentPane.add(tbFornecedores);
 
-		JButton btnCadastrarFornecedor = new JButton("Cadastrar Fornecedor");
-		btnCadastrarFornecedor.setBounds(10, 61, 139, 23);
+		JButton btnCadastrarFornecedor = new JButton("Cadastrar");
+		btnCadastrarFornecedor.setBounds(635, 75, 139, 23);
 		contentPane.add(btnCadastrarFornecedor);
 
-		JButton btnModificarFornecedor = new JButton("Modificar Fornecedor");
-		btnModificarFornecedor.setBounds(159, 61, 139, 23);
+		JButton btnModificarFornecedor = new JButton("Modificar");
+		btnModificarFornecedor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnModificarFornecedor.setBounds(635, 109, 139, 23);
 		contentPane.add(btnModificarFornecedor);
 
-		JButton btnExcluirFornecedor = new JButton("Excluir Fornecedor");
-		btnExcluirFornecedor.setBounds(308, 61, 139, 23);
+		JButton btnExcluirFornecedor = new JButton("Excluir");
+		btnExcluirFornecedor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnExcluirFornecedor.setBounds(635, 143, 139, 23);
 		contentPane.add(btnExcluirFornecedor);
 
 		JButton btnInicio = new JButton("Inicio");
