@@ -144,6 +144,5 @@ public class telaFuncionarios extends JFrame {
 		pfSenhaFunc = new JPasswordField();
 		pfSenhaFunc.setBounds(115, 186, 250, 17);
 		contentPane.add(pfSenhaFunc);
-		//teste
 	}
 }
