@@ -39,18 +39,18 @@ public class telaFornecedor extends JFrame {
 	public telaFornecedor() {
 		setTitle("Fornecedores");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
+		setBounds(100, 100, 650, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
 		tbFornecedores = new JTable();
-		tbFornecedores.setBounds(10, 177, 764, 307);
+		tbFornecedores.setBounds(10, 209, 614, 307);
 		contentPane.add(tbFornecedores);
 
 		JButton btnCadastrarFornecedor = new JButton("Cadastrar");
-		btnCadastrarFornecedor.setBounds(635, 75, 139, 23);
+		btnCadastrarFornecedor.setBounds(485, 71, 139, 23);
 		contentPane.add(btnCadastrarFornecedor);
 
 		JButton btnModificarFornecedor = new JButton("Modificar");
@@ -58,7 +58,7 @@ public class telaFornecedor extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnModificarFornecedor.setBounds(635, 109, 139, 23);
+		btnModificarFornecedor.setBounds(485, 105, 139, 23);
 		contentPane.add(btnModificarFornecedor);
 
 		JButton btnExcluirFornecedor = new JButton("Excluir");
@@ -66,11 +66,11 @@ public class telaFornecedor extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnExcluirFornecedor.setBounds(635, 143, 139, 23);
+		btnExcluirFornecedor.setBounds(485, 139, 139, 23);
 		contentPane.add(btnExcluirFornecedor);
 
 		JButton btnInicio = new JButton("Inicio");
-		btnInicio.setBounds(685, 508, 89, 23);
+		btnInicio.setBounds(485, 527, 139, 23);
 		btnInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaPrincipal().setVisible(true);
@@ -116,11 +116,11 @@ public class telaFornecedor extends JFrame {
 		textField_3.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Telefone .:");
-		lblNewLabel_4.setBounds(35, 147, 58, 14);
+		lblNewLabel_4.setBounds(35, 146, 58, 14);
 		contentPane.add(lblNewLabel_4);
 		
 		textField_4 = new JTextField();
-		textField_4.setBounds(103, 143, 150, 20);
+		textField_4.setBounds(103, 142, 150, 20);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 	}
