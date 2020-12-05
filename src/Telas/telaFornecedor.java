@@ -17,11 +17,11 @@ public class telaFornecedor extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable tbFornecedores;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField tfCodFornec;
+	private JTextField tfNomeFornec;
+	private JTextField tfCNPJFornec;
+	private JTextField tfCttFornec;
+	private JTextField tfTelFornec;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -79,49 +79,49 @@ public class telaFornecedor extends JFrame {
 		});
 		contentPane.add(btnInicio);
 		
-		JLabel lblNewLabel = new JLabel("Cod .:");
-		lblNewLabel.setBounds(35, 28, 46, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblCodFornec = new JLabel("Cod .:");
+		lblCodFornec.setBounds(35, 28, 46, 14);
+		contentPane.add(lblCodFornec);
 		
-		textField = new JTextField();
-		textField.setBounds(103, 22, 150, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		tfCodFornec = new JTextField();
+		tfCodFornec.setBounds(103, 22, 250, 20);
+		contentPane.add(tfCodFornec);
+		tfCodFornec.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nome .:");
-		lblNewLabel_1.setBounds(35, 59, 46, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblNomeFornec = new JLabel("Nome .:");
+		lblNomeFornec.setBounds(35, 59, 46, 14);
+		contentPane.add(lblNomeFornec);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(103, 53, 150, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		tfNomeFornec = new JTextField();
+		tfNomeFornec.setBounds(103, 53, 250, 20);
+		contentPane.add(tfNomeFornec);
+		tfNomeFornec.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("CNPJ .:");
-		lblNewLabel_2.setBounds(35, 91, 46, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblCNPJFornec = new JLabel("CNPJ .:");
+		lblCNPJFornec.setBounds(35, 91, 46, 14);
+		contentPane.add(lblCNPJFornec);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(103, 84, 150, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		tfCNPJFornec = new JTextField();
+		tfCNPJFornec.setBounds(103, 84, 250, 20);
+		contentPane.add(tfCNPJFornec);
+		tfCNPJFornec.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Contato .:");
-		lblNewLabel_3.setBounds(35, 118, 58, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblcttFornec = new JLabel("Contato .:");
+		lblcttFornec.setBounds(35, 118, 58, 14);
+		contentPane.add(lblcttFornec);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(103, 112, 150, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		tfCttFornec = new JTextField();
+		tfCttFornec.setBounds(103, 112, 250, 20);
+		contentPane.add(tfCttFornec);
+		tfCttFornec.setColumns(10);
 		
-		JLabel lblNewLabel_4 = new JLabel("Telefone .:");
-		lblNewLabel_4.setBounds(35, 146, 58, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblTelFornec = new JLabel("Telefone .:");
+		lblTelFornec.setBounds(35, 146, 58, 14);
+		contentPane.add(lblTelFornec);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(103, 142, 150, 20);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		tfTelFornec = new JTextField();
+		tfTelFornec.setBounds(103, 142, 250, 20);
+		contentPane.add(tfTelFornec);
+		tfTelFornec.setColumns(10);
 	}
 }

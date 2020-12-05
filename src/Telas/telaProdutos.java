@@ -18,12 +18,12 @@ public class telaProdutos extends JFrame {
 	private JPanel contentPane;
 	private JTable tbProdutos;
 	private JTextField txPesquisa;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
+	private JTextField tfCodProd;
+	private JTextField tfCodTipoProd;
+	private JTextField tfValorProd;
+	private JTextField tfNomeProd;
+	private JTextField tfDescProd;
+	private JTextField tfQtdProd;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -88,58 +88,58 @@ public class telaProdutos extends JFrame {
 
 		contentPane.add(btnInicio);
 		
-		JLabel lblNewLabel = new JLabel("Cod .:");
-		lblNewLabel.setBounds(25, 31, 46, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblCodProd = new JLabel("Cod .:");
+		lblCodProd.setBounds(25, 31, 46, 14);
+		contentPane.add(lblCodProd);
 		
-		textField = new JTextField();
-		textField.setBounds(143, 28, 180, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		tfCodProd = new JTextField();
+		tfCodProd.setBounds(143, 28, 180, 20);
+		contentPane.add(tfCodProd);
+		tfCodProd.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("Cod. Tipo Produto .:");
-		lblNewLabel_1.setBounds(25, 62, 103, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblCodTipoProd = new JLabel("Cod. Tipo Produto .:");
+		lblCodTipoProd.setBounds(25, 62, 103, 14);
+		contentPane.add(lblCodTipoProd);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(143, 59, 180, 20);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		tfCodTipoProd = new JTextField();
+		tfCodTipoProd.setBounds(143, 59, 180, 20);
+		contentPane.add(tfCodTipoProd);
+		tfCodTipoProd.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(143, 90, 180, 20);
-		contentPane.add(textField_2);
-		textField_2.setColumns(10);
+		tfValorProd = new JTextField();
+		tfValorProd.setBounds(143, 90, 180, 20);
+		contentPane.add(tfValorProd);
+		tfValorProd.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Valor do Produto .:");
-		lblNewLabel_2.setBounds(25, 93, 91, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblValorProd = new JLabel("Valor do Produto .:");
+		lblValorProd.setBounds(25, 93, 91, 14);
+		contentPane.add(lblValorProd);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(143, 121, 180, 20);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		tfNomeProd = new JTextField();
+		tfNomeProd.setBounds(143, 121, 180, 20);
+		contentPane.add(tfNomeProd);
+		tfNomeProd.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Produto .:");
-		lblNewLabel_3.setBounds(25, 127, 63, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblNomeProd = new JLabel("Produto .:");
+		lblNomeProd.setBounds(25, 127, 63, 14);
+		contentPane.add(lblNomeProd);
 		
-		JLabel lblNewLabel_4 = new JLabel("Descri\u00E7\u00E3o .:");
-		lblNewLabel_4.setBounds(400, 31, 78, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblDescProd = new JLabel("Descri\u00E7\u00E3o .:");
+		lblDescProd.setBounds(400, 31, 78, 14);
+		contentPane.add(lblDescProd);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(400, 59, 244, 51);
-		contentPane.add(textField_4);
-		textField_4.setColumns(10);
+		tfDescProd = new JTextField();
+		tfDescProd.setBounds(400, 59, 244, 51);
+		contentPane.add(tfDescProd);
+		tfDescProd.setColumns(10);
 		
-		JLabel lblNewLabel_5 = new JLabel("Quantidade .:");
-		lblNewLabel_5.setBounds(400, 127, 78, 14);
-		contentPane.add(lblNewLabel_5);
+		JLabel lblQtdProd = new JLabel("Quantidade .:");
+		lblQtdProd.setBounds(400, 127, 78, 14);
+		contentPane.add(lblQtdProd);
 		
-		textField_5 = new JTextField();
-		textField_5.setBounds(488, 121, 156, 20);
-		contentPane.add(textField_5);
-		textField_5.setColumns(10);
+		tfQtdProd = new JTextField();
+		tfQtdProd.setBounds(488, 121, 156, 20);
+		contentPane.add(tfQtdProd);
+		tfQtdProd.setColumns(10);
 	}
 }

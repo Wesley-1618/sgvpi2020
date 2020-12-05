@@ -72,7 +72,7 @@ public class telaFuncionarios extends JFrame {
 		contentPane.add(button);
 
 		btnSair = new JButton("Inicio");
-		btnSair.setBounds(497, 519, 127, 23);
+		btnSair.setBounds(497, 527, 127, 23);
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new telaPrincipal().setVisible(true);
@@ -102,47 +102,47 @@ public class telaFuncionarios extends JFrame {
 		contentPane.add(btnExcluirFuncionrio);
 		
 		tfNomeFunc = new JTextField();
-		tfNomeFunc.setBounds(115, 60, 150, 20);
+		tfNomeFunc.setBounds(115, 60, 250, 20);
 		contentPane.add(tfNomeFunc);
 		tfNomeFunc.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Nome .:");
-		lblNewLabel.setBounds(30, 63, 46, 14);
-		contentPane.add(lblNewLabel);
+		JLabel lblNomeFunc = new JLabel("Nome .:");
+		lblNomeFunc.setBounds(30, 63, 46, 14);
+		contentPane.add(lblNomeFunc);
 		
-		JLabel lblNewLabel_1 = new JLabel("CPF .:");
-		lblNewLabel_1.setBounds(30, 104, 46, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblCpfFunc = new JLabel("CPF .:");
+		lblCpfFunc.setBounds(30, 104, 46, 14);
+		contentPane.add(lblCpfFunc);
 		
 		tfCpfFunc = new JTextField();
-		tfCpfFunc.setBounds(115, 101, 150, 20);
+		tfCpfFunc.setBounds(115, 101, 250, 20);
 		contentPane.add(tfCpfFunc);
 		tfCpfFunc.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Cod .:");
-		lblNewLabel_2.setBounds(30, 26, 46, 14);
-		contentPane.add(lblNewLabel_2);
+		JLabel lblCodFunc = new JLabel("Cod .:");
+		lblCodFunc.setBounds(30, 26, 46, 14);
+		contentPane.add(lblCodFunc);
 		
 		tfCodFunc = new JTextField();
-		tfCodFunc.setBounds(115, 23, 150, 20);
+		tfCodFunc.setBounds(115, 23, 250, 20);
 		contentPane.add(tfCodFunc);
 		tfCodFunc.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Login .:");
-		lblNewLabel_3.setBounds(30, 144, 46, 14);
-		contentPane.add(lblNewLabel_3);
+		JLabel lblLoginFunc = new JLabel("Login .:");
+		lblLoginFunc.setBounds(30, 144, 46, 14);
+		contentPane.add(lblLoginFunc);
 		
 		tfLoginFunc = new JTextField();
-		tfLoginFunc.setBounds(115, 141, 150, 20);
+		tfLoginFunc.setBounds(115, 141, 250, 20);
 		contentPane.add(tfLoginFunc);
 		tfLoginFunc.setColumns(10);
 		
-		JLabel lblNewLabel_4 = new JLabel("Senha .:");
-		lblNewLabel_4.setBounds(30, 189, 46, 14);
-		contentPane.add(lblNewLabel_4);
+		JLabel lblSenhaFunc = new JLabel("Senha .:");
+		lblSenhaFunc.setBounds(30, 189, 46, 14);
+		contentPane.add(lblSenhaFunc);
 		
 		pfSenhaFunc = new JPasswordField();
-		pfSenhaFunc.setBounds(115, 186, 150, 17);
+		pfSenhaFunc.setBounds(115, 186, 250, 17);
 		contentPane.add(pfSenhaFunc);
 		//teste
 	}
